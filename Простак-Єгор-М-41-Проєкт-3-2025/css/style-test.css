@@ -1,0 +1,107 @@
+
+    body {
+        background-color: rgb(52, 55, 56);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button {
+        position: relative;
+        z-index: 1;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: black;
+        border: none;
+        border-radius: 20px;
+        width: 400px;
+        height: 200px;
+        color: rgb(255, 255, 255);
+
+
+
+        &:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+            animation: moveUp 0.5s ease-out forwards, rotate 0.3s linear infinite 0.5s;
+            
+            }
+        &:not(:hover) {
+            animation: moveDown 0.5s ease-out forwards;
+        }
+    }
+    
+    button::before{
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 127, 0) 7%, rgb(255, 255, 0) 14%, rgb(0, 255, 0) 21%, rgb(0, 0, 255) 28%, rgb(75, 0, 130) 36%, rgb(148, 0, 211) 44%, rgb(255, 0, 0) 52%, rgb(255, 127, 0) 60%, rgb(255, 255, 0) 68%, rgb(0, 255, 0) 76%, rgb(0, 0, 255) 84%, rgb(75, 0, 130) 92%, rgb(148, 0, 211) 100%);
+        background-size: 300% 100%;
+        z-index: -1;
+        filter: blur(20px);
+        animation: borderShine 5s linear infinite;
+
+    }
+
+    button::after{
+        content:"Перейти до вивчення\A літаків";
+        white-space: pre;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0px; left:0px; right:0px; bottom:0px;
+        border-radius: 20px;
+        background: black;
+        z-index: 0;
+        animation: jump 1s ease-in-out infinite;
+    }
+    @keyframes jump {
+        0% {
+            transform: translateX(-15px);
+        }
+        50% {
+            transform: translateX(15px);
+        }
+        100% {
+            transform: translateX(-15px);
+        }
+    }
+    @keyframes moveUp {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-20px);
+        }
+    }
+    @keyframes moveDown {
+        from {
+            transform: translateY(-20px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(-360deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes borderShine {
+        0% {
+            background-position: 100% 0%;
+        }
+        50% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 0%;
+        }
+    }

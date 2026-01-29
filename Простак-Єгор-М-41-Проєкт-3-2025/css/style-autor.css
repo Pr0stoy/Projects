@@ -1,0 +1,195 @@
+body {
+    font-family: sans-serif;
+    background-color: #9e9999;
+
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0px;
+}
+#autor1 {
+	width:600px;
+	height:400px;
+	border: 4px solid #f2f5f5;
+	border-radius: 20px;
+	float:left;
+	margin-top:5px;
+	position: relative;
+	z-index: 2;
+
+}
+#autor1txt {
+	font-size:30px;
+	margin-top:5px;
+	margin-left:520px;
+	text-align:center;
+	color:#0A1C70;
+	position: relative;
+	z-index: 2;
+	background: #9e9999;
+}
+
+#autor2 {
+	width:600px;
+	height:400px;
+	border: 4px solid #f2f5f5;
+	border-radius: 20px;
+	float:right;
+	margin-top:5px;
+	position: relative;
+	z-index: 2;
+
+}
+
+#autor2txt {
+	background: #9e9999;
+	font-size:30px;
+	margin-top:5px;
+	margin-right:520px;
+	text-align:center;
+	color:#0A1C70;
+	position: relative;
+	z-index: 2;
+
+}
+.square {
+
+	display: flex;
+	justify-content: center;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 34px;
+	color: #c41515;
+	width: 100%;
+	height: 2500px;
+	background-color: #9e9999;
+	position: relative;
+	z-index: 2;
+}
+.empty{
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 34px;
+	color: #c41515;
+}
+.gb{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items:end;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 34px;
+	color: #c41515;
+}
+img{
+	display: flex;
+	margin: 0 auto; /*ВОТ ТАК НУЖНО ЦЕНТРИРОВАТЬ КАРТИНКИ*/
+	width: 300px;
+	height: 300px;
+	border:none;
+	border-radius:75px;
+
+}
+    .btn::before {
+        content: 'На головну';
+        position: fixed;
+        top: -1%;
+        left: -1%;
+        right: -1%;
+        bottom: -1%;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        border-radius: 25px;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .btn::after {
+        content: '';
+        position: absolute;
+        top: -1%;
+        left: -1%;
+        right: -1%;
+        bottom: -1%;
+        border-radius: 25px;
+        filter: blur(20px);
+        z-index: -1;
+        animation: animateBG 2s linear infinite;       
+        background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 127, 0) 7%, rgb(255, 255, 0) 14%, rgb(0, 255, 0) 21%, rgb(0, 0, 255) 28%, rgb(75, 0, 130) 36%, rgb(148, 0, 211) 44%, rgb(148, 0, 211) 52%, rgb(75, 0, 130) 60%, rgb(0, 0, 255) 68%, rgb(0, 255, 0) 76%, rgb(255, 255, 0) 84%, rgb(255, 127, 0) 92%, rgb(255, 0, 0) 100%);
+        background-size: 400%;
+    }
+
+    .btn {
+        width: 200px;
+        height: 125px;
+        background: rgb(0, 0, 0);
+        color: white;
+        font-family: sans-serif;
+        font-size: 48px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        display: flex;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        z-index: 1;
+
+        &:hover {
+            animation: sizeUp 0.5s forwards;
+        }
+        &:not(:hover) {
+            animation: sizeDown 0.5s forwards;
+        }
+    }
+
+    @keyframes animateBG {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 100% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+    @keyframes sizeUp {
+        0% {
+            transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+        }
+        50%{
+            transform: translate(-50%, -50%) translateY(-40px) rotate(15deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) translateY(-40px) rotate(0deg);
+        }
+    }
+    @keyframes sizeDown {
+        0% {
+            transform: translate(-50%, -50%) translateY(-40px) rotate(0deg);
+        }
+        50%{
+            transform: translate(-50%, -50%) translateY(0px) rotate(15deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+        }
+    }
+
+    
