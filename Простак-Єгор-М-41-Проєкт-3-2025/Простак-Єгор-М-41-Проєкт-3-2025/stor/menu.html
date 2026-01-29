@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+	<link rel = 'stylesheet' href = '../css/style-menu.css'>
+	
+</head>
+<script>
+function toggleSubmenu(id) {
+            const sub = document.getElementById(id);
+            sub.classList.toggle('open');
+}
+
+
+</script>
+
+<body>
+
+<div ><a href = 'test.html' target = 'contentFrame' class = 'header-special'>Головна</a></div>
+
+<div onmouseenter="toggleSubmenu('jets1', true)" 
+onmouseleave="toggleSubmenu('jets1', false)" >
+
+<div class = 'menu-header' onclick="this.parentElement.classList.toggle('fixed')">F-14</div>
+	<div id = 'jets1' class = 'submenu'>
+	<a href="F14-engine.html" target="contentFrame" class = 'submenu-text'>Двигун</a>
+	<a href="F14-use.html" target="contentFrame" class = 'submenu-text'>Використання</a>
+   	<a href="F14-weapon.html" target="contentFrame" class = 'submenu-text'>Озброєння</a>
+	<a href="F14-class.html" target="contentFrame" class = 'submenu-text'>Класифікація</a> 
+</div>
+</div>
+
+<div onmouseenter="toggleSubmenu('jets2', true)" 
+onmouseleave="toggleSubmenu('jets2', false)"  >
+
+<div class = 'menu-header' onclick="this.parentElement.classList.toggle('fixed')">F-16</div>
+	<div id = 'jets2' class = 'submenu'>
+	<a href="F16-engine.html" target="contentFrame" class = 'submenu-text'>Двигун</a>
+	<a href="F16-use.html" target="contentFrame" class = 'submenu-text'>Використання</a>
+   	<a href="F16-weapon.html" target="contentFrame" class = 'submenu-text'>Озброєння</a>
+	<a href="F16-class.html" target="contentFrame" class = 'submenu-text'>Класифікація</a> 
+</div>
+</div>
+
+<div onmouseenter="toggleSubmenu('jets3', true)" 
+onmouseleave="toggleSubmenu('jets3', false)" >
+
+<div class = 'menu-header' onclick="this.parentElement.classList.toggle('fixed')">F-18</div>
+	<div id = 'jets3' class = 'submenu'>
+	<a href="F18-engine.html" target="contentFrame" class = 'submenu-text'>Двигун</a>
+	<a href="F18-use.html" target="contentFrame" class = 'submenu-text'>Використання</a>
+   	<a href="F18-weapon.html" target="contentFrame" class = 'submenu-text'>Озброєння</a>
+	<a href="F18-class.html" target="contentFrame" class = 'submenu-text'>Класифікація</a> 
+</div>
+</div>
+
+<div onmouseenter="toggleSubmenu('jets4', true)" 
+onmouseleave="toggleSubmenu('jets4', false)" >
+
+<div class = 'menu-header'  onclick="this.parentElement.classList.toggle('fixed')">F-22</div>
+	<div id = 'jets4' class = 'submenu'>
+	<a href="F22-engine.html" target="contentFrame" class = 'submenu-text'>Двигун</a>
+	<a href="F22-use.html" target="contentFrame" class = 'submenu-text'>Використання</a>
+   	<a href="F22-weapon.html" target="contentFrame" class = 'submenu-text'>Озброєння</a>
+	<a href="F22-class.html" target="contentFrame" class = 'submenu-text'>Класифікація</a> 
+</div>
+</div>
+
+
+
+<a href="photo.html" target="contentFrame">Фотогалерея</a>
+<a href="autor.html" target="contentFrame">Про автора</a>
+</body>
+</html>

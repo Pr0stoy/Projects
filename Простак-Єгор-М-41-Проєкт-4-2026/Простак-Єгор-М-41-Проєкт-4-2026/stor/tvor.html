@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tvorche </title>
+    <link rel="stylesheet" href="../css/tvor-style.css">
+</head>
+<body>
+    <div class="tvor-title">
+        Енеїда
+    </div>
+
+    <div class="cont1">
+        <img src="../media/tvor-photo-1.jpg" id="ph1" alt = 'Kotlarevskiy'>
+        <h1 id = 'p1' onClick="p1Fly()">Іва́н Петро́вич Котляре́вський (29 серпня (9 вересня) 1769, 
+            Полтава — 29 жовтня (10 листопада) 1838, Полтава) — 
+            український письменник, військовий, класик нової 
+            української літератури, громадський діяч.
+            Його поема «Енеїда» (1798) стала великим твором 
+            загальнонаціонального значення нової української 
+            літератури, написаним народною мовою.</h1>
+        <h1 id = 'p2'>Цей твір започаткував еру українського 
+            національного відродження</h1>    
+    </div>
+    <div class="cont1">
+        <h1 id = 'p1-1' onClick="p2Fly()">«Енеї́да» — українська бурлескно-травестійна поема, 
+            написана українським письменником Іваном Котляревським, заснована на сюжеті 
+            однойменної класичної поеми римського поета Вергілія. Складається з шести 
+            частин, на відміну від дванадцяти частин Вергілія. Написана 
+            чотиристопним ямбом.</h1>
+        <h1 id = 'p2-2'>В «Енеїді» зафіксовано близько 7000 слів.</h1>
+        <img src="../media/tvor-photo-2.jpg" id="ph1" alt = 'Eneida'>    
+    </div>
+
+     <div class = 'ukr'>
+        <h2>
+        <a href = 'index.html'> Головна </a>
+            </h2>
+    </div>
+    <div class = 'spisok'>
+        <ul>
+            <li id = 'spis1'>Еней — очільник вцілілих троянців</li>
+            <li>Анхіз — батько Енея</li>
+            <li>Венера  — богиня весни та кохання, мати Енея</li>
+            <li>Низ та Евріал — друзі-троянці</li>
+            <li>Зевс (Зевес в оригіналі Котляревського) — верховний бог</li>
+        </ul>
+    </div>
+<script>
+    function p1Fly() {
+        const par1 = document.getElementById('p1')
+        par1.classList.add('p1-fly')
+        const par2 = document.getElementById('p2')
+        setTimeout(() => {
+            par2.style.opacity = '1';
+
+        },100);
+    }
+    function p2Fly() {
+        const par1 = document.getElementById('p1-1')
+        par1.classList.add('p1-fly')
+        const par2 = document.getElementById('p2-2')
+        setTimeout(() => {
+            par2.style.opacity = '1';
+
+        },100);
+    }
+</script>
+
+</body>
+</html>
