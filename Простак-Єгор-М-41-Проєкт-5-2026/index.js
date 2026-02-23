@@ -79,4 +79,39 @@
 //         }
 //     }
 // }
+    // // Task Tvorche
 
+let fuel = +prompt("Рівень палива (0-100):");
+let speed = +prompt("Теперішня швидкість(100-700):");
+let isAtmosphere = confirm("Датчик атмосфери: Знайдена (ОК) або Вакуум (Відміна)?");
+let cont0 = document.getElementById("cont0");
+let cont1 = document.getElementById("cont1");
+let cont = document.getElementById("test");
+if (fuel > 20) {
+    cont0.textContent = ` Статус: Палива достатньо!`;
+    if (isAtmosphere) {
+        cont1.textContent = ` Статус: Атмосфера наявна!`;
+        if (speed < 500) {
+            if (fuel > 50) {
+                cont.textContent = ` Статус: М'яка посадка на парашутах виконана успішно!`;
+            } else {
+                cont.textContent = ` Статус: Тверда посадка! Парашути не витримали через нестачу палива.`;
+            }
+        } else {
+            cont.textContent = ` КАТАСТРОФА: Надто швидко для повітря! Корпус згорів на вході!`;
+        }
+    } else {
+        cont1.textContent = ` Статус: Атмосфера не наявна!`;
+        if (speed < 1000) {
+            if (fuel % 2 === 0) {
+                cont.textContent = ` Статус: Ідеальна вертикальна посадка у вакуумі. Двигуни працюють синхронно.`;
+            } else {
+                cont.textContent = ` Статус: Крен! Один двигун барахлить (паливо не розміщене рівномірно). Посадка на бік.`;
+            }
+        } else {
+            cont.textContent = ` КАТАСТРОФА: Зіткнення! Надто висока інерція для гальмування в вакуумі.`;
+        }
+    }
+} else {
+    cont.textContent = ` ПРОТОКОЛ ЗУПИНЕНО: Палива замало. Негайне катапультування!`;
+}
