@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    #result{
+        padding:10px;
+        border-radius:30px;
+        color:red;
+        background-color: aqua;
+        font-size:70px;
+    }
+</style>
+<body>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+        // Task 7
+let x = prompt("Введіть шестицифрове число:");
+let a = Number(x.at(0))+Number(x.at(1))+Number(x.at(2));
+let b = Number(x.at(-1))+Number(x.at(-2))+Number(x.at(-3));
+let cont = document.getElementById("result");
+if(a==b){
+    cont.textContent = `Так воно щасливе`;
+}
+else{
+    cont.textContent = `ні, не щасливе`;
+}
+</script>
+</html>

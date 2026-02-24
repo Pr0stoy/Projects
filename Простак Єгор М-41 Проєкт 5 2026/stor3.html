@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    #result{
+        padding:10px;
+        border-radius:30px;
+        color:red;
+        background-color: aqua;
+        font-size:70px;
+    }
+</style>
+<body>
+    <div id="result">
+
+    </div>
+</body>
+<script>
+    // Task 12
+let a = +prompt("Введіть кут а:");
+let b = +prompt("Введіть кут б:");
+let c = +prompt("Введіть кут с:");
+let cont = document.getElementById("result");
+if((a+b+c)==180){
+    if((a+b)>c && (b+c)>a && (a+c)>b){ // if(a<90 || b<90 || c<90)
+        cont.textContent = `TAK, він гострокутний`;
+    }
+    else{
+        cont.textContent = `НІ, він не гострокутний`;
+    }
+}
+else{
+    cont.textContent = `Ви ввели неправильні дані`;
+}
+</script>
+</html>
