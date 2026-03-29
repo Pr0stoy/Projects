@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Project</title>
+</head>
+<style>
+    /* body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        height: 100vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    } */
+    canvas{
+        border:1px solid black;
+        border-radius:20px;
+    }
+</style>
+
+<body>
+    <canvas id="Canvas" width="1000" height="500" ></canvas>
+    <script>
+    const canvas = document.getElementById("Canvas");
+    const ctx = canvas.getContext('2d');
+    const p = Math.PI;
+    //fill red
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(255,255,255)";
+    ctx.lineWidth = 0;
+    ctx.setLineDash([]);
+    ctx.moveTo(450,350);
+    ctx.lineTo(270,270);
+    ctx.lineTo(50,300);
+    ctx.fillStyle = 'rgb(255,0,0,0.05)'
+    ctx.fill();
+    ctx.stroke();
+    //green part
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(139,69,10)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([10,5]); // перший елемент що не розбирали
+    ctx.moveTo(250,50);
+    ctx.lineTo(50,300);
+    ctx.lineTo(270,270);
+    ctx.lineTo(250,50);
+    ctx.fillStyle = 'rgb(0,255,0,0.05)'
+    ctx.fill();
+    ctx.stroke();
+    //green solid line
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(139,69,10)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([]);
+    ctx.moveTo(250,50);
+    ctx.lineTo(50,300);
+    ctx.stroke();
+    //out
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(139,69,10)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([]);
+    ctx.moveTo(250,50);
+    ctx.lineTo(450,350);
+    ctx.lineTo(50,300);
+    ctx.stroke();
+    //in
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(139,69,10)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([10,5]);
+    ctx.moveTo(450,350);
+    ctx.lineTo(270,270);
+    ctx.stroke();
+    
+    //connect dots
+    ctx.beginPath();
+    ctx.strokeStyle = "rgb(0,0,200)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([]);
+    ctx.moveTo(360,310);
+    ctx.lineTo(260,150);
+    ctx.lineTo(150,175);    
+    ctx.lineTo(250,325);
+    ctx.lineTo(360,310);
+    ctx.fillStyle = 'rgb(0,0,255,0.2)';
+    ctx.fill();
+    ctx.stroke();
+//dots
+        //dot1
+        ctx.beginPath();
+        ctx.strokeStyle = "rgb(139,69,10)";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([]);
+        ctx.arc(360,310,5,0,2*p),true;
+        ctx.fillStyle = 'rgb(0,255,0)';
+        ctx.fill();
+        ctx.stroke();
+        //dot2
+        ctx.beginPath();
+        ctx.strokeStyle = "rgb(139,69,10)";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([]);
+        ctx.arc(260,150,5,0,2*p),true;
+        ctx.fillStyle = 'rgb(0,255,0)';
+        ctx.fill();
+        ctx.stroke();
+        //dot3
+        ctx.beginPath();
+        ctx.strokeStyle = "rgb(139,69,10)";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([]);
+        ctx.arc(250,325,5,0,2*p),true;
+        ctx.fillStyle = 'rgb(0,255,0)';
+        ctx.fill();
+        ctx.stroke();
+        //dot4
+        ctx.beginPath();
+        ctx.strokeStyle = "rgb(139,69,10)";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([]);
+        ctx.arc(150,175,5,0,2*p),true;
+        ctx.fillStyle = 'rgb(0,255,0)';
+        ctx.fill();
+        ctx.stroke();
+</script>
+</body>
+</html>
