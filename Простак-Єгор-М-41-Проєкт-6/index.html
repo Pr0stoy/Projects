@@ -6,7 +6,7 @@
     <title>Canvas Project</title>
 </head>
 <style>
-    /* body{
+     body{
         margin:0;
         padding:0;
         box-sizing: border-box;
@@ -14,7 +14,15 @@
         display:flex;
         align-items: center;
         justify-content: center;
-    } */
+    }
+    a{
+        text-decoration:none;
+        font-size:50px;
+        background-color:rgb(143, 143, 143);
+        margin:60px;
+        padding:10px;
+        border-radius:25px;
+    }
     canvas{
         border:1px solid black;
         border-radius:20px;
@@ -23,6 +31,8 @@
 
 <body>
     <canvas id="Canvas" width="1000" height="500" ></canvas>
+    <a href="stor2.html">Далі</a>
+</body>
     <script>
     const canvas = document.getElementById("Canvas");
     const ctx = canvas.getContext('2d');
@@ -122,10 +132,26 @@
         ctx.strokeStyle = "rgb(139,69,10)";
         ctx.lineWidth = 2;
         ctx.setLineDash([]);
-        ctx.arc(150,175,5,0,2*p),true;
+        ctx.arc(150,175,5,0,2*p,true);
         ctx.fillStyle = 'rgb(0,255,0)';
         ctx.fill();
         ctx.stroke();
+    //text
+    ctx.font = "35px serif ";
+    ctx.fillStyle = 'rgb(0,255,255)';
+    ctx.fillText("A",370,310);
+    //text
+    ctx.font = "35px serif ";
+    ctx.fillStyle = 'rgb(0,255,255)';
+    ctx.fillText("C",120,175);
+    //text
+    ctx.font = "35px serif ";
+    ctx.fillStyle = 'rgb(0,255,255)';
+    ctx.fillText("B",270,140);
+    //text
+    ctx.font = "35px serif ";
+    ctx.fillStyle = 'rgb(0,255,255)';
+    ctx.fillText("D",240,365);
 </script>
-</body>
+
 </html>

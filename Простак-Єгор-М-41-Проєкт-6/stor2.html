@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 page</title>
+</head>
+<style>
+    a{
+        text-decoration:none;
+        font-size:50px;
+        background-color:rgb(143, 143, 143);
+        margin:60px;
+        padding:10px;
+        border-radius:25px;
+    }
+</style>
+<body>
+    <canvas id="Canvas" width="1000" height="500"></canvas>
+    <a href="index.html">Назад</a>
+</body>
+<script>
+    const canvas = document.getElementById("Canvas");
+    const ctx = canvas.getContext('2d');
+    const p = Math.PI;
+    //body
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(60,120,100,0.5)";
+    ctx.strokeStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 2;
+    ctx.moveTo(300,100);
+    ctx.lineTo(500,100);
+    ctx.lineTo(500,400);
+    ctx.lineTo(300,400);
+    ctx.lineTo(300,100);
+    ctx.fill();
+    ctx.stroke();
+    //elipses
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(80,120,220)";
+    ctx.strokeStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 1;
+    ctx.ellipse(400,100,100,25,0,0,2*p,true);
+    ctx.fill();
+    ctx.stroke();
+    //elipses
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(60,120,200)";
+    ctx.strokeStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 2;
+    ctx.ellipse(400,250,115,25,100,0,2*p,true);
+    ctx.fill();
+    ctx.stroke();
+    //text
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.font = "35px serif";
+    ctx.fillText("B",270,320);
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.font = "35px serif";
+    ctx.fillText("A",510,200);
+    //elipses
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(40,100,180)";
+    ctx.strokeStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 1;
+    ctx.ellipse(400,400,100,25,0,0,2*p,true);
+    ctx.fill();
+    ctx.stroke();
+    //line
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 1;
+    ctx.fillRect(400,125,1,125);
+    ctx.fill();
+    ctx.stroke();
+    //line
+    ctx.beginPath();
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.lineWidth = 1;
+    ctx.fillRect(400,278,1,125);
+    ctx.fill();
+    ctx.stroke();
+</script>
+</html>
